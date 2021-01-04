@@ -35,6 +35,7 @@ function Home() {
                <motion.h1 
                   initial={{x:50, opacity:0}} 
                   animate={{opacity:1,x:0, transition:{duration:.5, delay:.1}}}
+                  className={style.h1}
                >Page Transition Demo</motion.h1>
                <motion.div className={style.button} whileHover={{color:'#F1B011'}} onClick={() => history.push('/detail')}>
                   <h3>Start!</h3>
@@ -53,7 +54,7 @@ function DetailPage() {
          <motion.section className={`${style.section} ${style.detailStyle}`} initial={{x : '100vw'}} animate={{x : '0vw', transition:{type:'tween'}}} exit={{zIndex:0, x:'-100vw'}}>
             <motion.div className={style.box} variants={parent} initial='hidden' animate='visible'>
                <motion.h1 variants={child} custom={1}>You may want to use...</motion.h1>
-               <ul> 
+               <ul className={style.ul}> 
                   <motion.li variants={child} custom={2}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, praesentium?</motion.li>
                   <motion.li variants={child} custom={3}>Lorem ipsum dolor sit amet consectetur.</motion.li>
                   <motion.li variants={child} custom={4}>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</motion.li>

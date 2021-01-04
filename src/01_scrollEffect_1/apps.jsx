@@ -9,7 +9,7 @@ function AppsEffect_1() {
 
    return(
       <Fragment>
-         <section>
+         <section className={style.section}>
             <motion.div 
                className={style.box} 
                style={{scale:scaleBox, transition:.5}}
